@@ -26,6 +26,7 @@ h1 {
     -moz-background-clip: text;
     -ms-background-clip: text;
     background-clip: text;
+    text-align: center;
 }
 
 form {

@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color: #ddead1;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -9,14 +9,23 @@ body {
 }
 
 .container {
-    background: #fff;
+    background: #D1E9F6;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 600px;
+    min-width: 300px;
 }
 
 h1 {
     margin-bottom: 20px;
+    background: linear-gradient(to right, red, blue);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -ms-background-clip: text;
+    background-clip: text;
 }
 
 form {
@@ -29,19 +38,44 @@ input, select, button {
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 4px;
+    font-size: 1em;
 }
 
 button {
-    background-color: #007BFF;
-    color: #fff;
+    margin-top: 20px;
+    background-color: #5AB2FF;
+    color: black;
     border: none;
     cursor: pointer;
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: #FFF9D0;
 }
 
 #result {
     margin-top: 20px;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+        padding: 15px;
+    }
+
+    input, select, button {
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 95%;
+        padding: 10px;
+    }
+
+    input, select, button {
+        font-size: 0.8em;
+    }
 }

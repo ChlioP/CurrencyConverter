@@ -12,7 +12,7 @@ function handleSubmit(e) {
         return;
     }
 
-    const apiKey = 'ccc3e7abde53192f6c376238';  // Replace with your Exchangerate API key
+    const apiKey = 'ccc3e7abde53192f6c376238';  // Exchangerate API
     const url = `https://v6.exchangerate-api.com/v6/${apiKey}/latest/${fromCurrency}`;
 
     console.log(`Fetching exchange rates from: ${url}`);
@@ -47,7 +47,7 @@ function processRates(data, amount, fromCurrency, toCurrency) {
 }
 
 function displayResult(amount, fromCurrency, convertedAmount, toCurrency) {
-    document.getElementById('result').innerText = `${amount} ${fromCurrency} = ${convertedAmount.toFixed(2)} ${toCurrency}`;
+    document.getElementById('result').innerText = `${amount} ${fromCurrency} = ${convertedAmount.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })} ${toCurrency}`;
 }
 
 function handleFetchError(error) {

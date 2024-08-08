@@ -27,7 +27,7 @@ A simple and responsive currency converter application that allows users to conv
 3. Select the currency you are converting to.
 4. Click the "Convert" button to see the result.
 
-### API
+## API
 This project uses the Exchangerate API to fetch real-time exchange rates.
 
 API Endpoint: https://v6.exchangerate-api.com/v6/YOUR-API-KEY/latest/USD
@@ -49,18 +49,22 @@ API Endpoint: https://v6.exchangerate-api.com/v6/YOUR-API-KEY/latest/USD
 - Set up project structure.
 - Design the basic layout of the application.
 - Implement the form for input and currency selection.
+  
 **Week 2:**
 - Integrate the Exchangerate API.
 - Implement the conversion logic.
 - Display the conversion result.
+  
 **Week 3:**
 - Add responsive design.
 - Test the application across different browsers and devices.
 - Fix any bugs or issues.
+  
 **Week 4:**
 - Add additional features (e.g., historical rates, charts).
 - Write documentation and comments in the code.
 - Final testing and deployment.
+  
 ### Future Enhancements
 - Multi-currency conversion.
 - User accounts and favorites.

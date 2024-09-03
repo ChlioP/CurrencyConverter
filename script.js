@@ -6,6 +6,7 @@ function handleSubmit(e) {
     const amount = document.getElementById('amount').value;
     const fromCurrency = document.getElementById('from-currency').value;
     const toCurrency = document.getElementById('to-currency').value;
+    const date = document.getElementById('date').value;
 
     if (!isValidAmount(amount)) {
         alert('Please enter a valid amount');
@@ -13,9 +14,9 @@ function handleSubmit(e) {
     }
 
     const apiKey = 'ccc3e7abde53192f6c376238';  // Exchangerate API
-    const url = https://v6.exchangerate-api.com/v6/${apiKey}/latest/${fromCurrency};
+    const url = `https://v6.exchangerate-api.com/v6/${apiKey}/latest/${fromCurrency}`;
 
-    console.log(Fetching exchange rates from: ${url});
+    console.log(`Fetching exchange rates from: ${url}`);
 
     fetch(url)
         .then(handleFetchResponse)
@@ -30,7 +31,7 @@ function isValidAmount(amount) {
 function handleFetchResponse(response) {
     console.log('Fetch response:', response);
     if (!response.ok) {
-        throw new Error(HTTP error! status: ${response.status});
+        throw new Error(`HTTP error! status: ${response.status}`);
     }
     return response.json();
 }
@@ -47,7 +48,7 @@ function processRates(data, amount, fromCurrency, toCurrency) {
 }
 
 function displayResult(amount, fromCurrency, convertedAmount, toCurrency) {
-    document.getElementById('result').innerText = ${amount} ${fromCurrency} = ${convertedAmount.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })} ${toCurrency};
+    document.getElementById('result').innerText = `${amount} ${fromCurrency} = ${convertedAmount.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })} ${toCurrency}`;
 }
 
 function handleFetchError(error) {

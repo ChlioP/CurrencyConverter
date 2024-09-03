@@ -6,14 +6,13 @@ function handleSubmit(e) {
     const amount = document.getElementById('amount').value;
     const fromCurrency = document.getElementById('from-currency').value;
     const toCurrency = document.getElementById('to-currency').value;
-    const date = document.getElementById('date').value;
 
     if (!isValidAmount(amount)) {
         alert('Please enter a valid amount');
         return;
     }
 
-    const apiKey = 'ccc3e7abde53192f6c376238';  // Exchangerate API
+    const apiKey = 'ccc3e7abde53192f6c376238';  // Exchangerate API key
     const url = `https://v6.exchangerate-api.com/v6/${apiKey}/latest/${fromCurrency}`;
 
     console.log(`Fetching exchange rates from: ${url}`);

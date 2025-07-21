@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: linear-gradient(to bottom right, #fbcfe8, #c4b5fd, #93c5fd); /* pink → purple → blue */
+    background: linear-gradient(to bottom right, #fbcfe8, #c4b5fd, #93c5fd); /* pink → purple → blue */
     display: flex;
     justify-content: center;
     align-items: center;
